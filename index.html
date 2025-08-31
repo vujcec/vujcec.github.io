@@ -1,94 +1,14 @@
 <!doctype html>
-<div class="controls">
-<button id="mode-3day" type="button" aria-pressed="true" title="Show 3‑day forecast">3‑day</button>
-<button id="mode-today" type="button" aria-pressed="false" title="Show today only">Today</button>
-<button id="units-metric" type="button" aria-pressed="true" title="Metric units (°C, km/h)">Metric</button>
-<button id="units-imperial" type="button" aria-pressed="false" title="US units (°F, mph)">US</button>
-<button id="refresh" type="button" title="Reload forecast">Refresh</button>
-<a id="open-direct" class="btn" href="https://wttr.in/" target="_blank" rel="noopener">Open wttr.in</a>
-</div>
-</header>
-
-
-<main>
-<div class="panel">
-<div class="img-wrap">
-<!-- No location specified: wttr.in uses the visitor's IP address to geolocate. -->
-<img id="forecast" alt="Weather forecast image from wttr.in" decoding="async" loading="eager" />
-</div>
-<p class="note">Tip: wttr.in detects your location by your public IP address. Using a VPN/proxy will show weather for that exit location.</p>
-</div>
-</main>
-
-
-<footer>
-Built with <a href="https://wttr.in/" target="_blank" rel="noopener">wttr.in</a>. This page is static and has no trackers.
-</footer>
-
-
-<script>
-(function(){
-const img = document.getElementById('forecast');
-const btn3 = document.getElementById('mode-3day');
-const btnT = document.getElementById('mode-today');
-const bMet = document.getElementById('units-metric');
-const bImp = document.getElementById('units-imperial');
-const refresh = document.getElementById('refresh');
-const openDirect = document.getElementById('open-direct');
-
-
-const st = {
-mode: localStorage.getItem('wttr.mode') || '3day', // '3day' | 'today'
-units: localStorage.getItem('wttr.units') || 'metric' // 'metric' | 'imperial'
-};
-
-
-function buildUrl(){
-// wttr.in recognizes parameters without values: 'm' (metric), '0' (today only), 'lang=en'.
-const flags = [];
-if (st.units === 'metric') flags.push('m');
-if (st.mode === 'today') flags.push('0');
-// Add a cache-buster so users can hit refresh and bypass any CDN caching for a fresh image.
-const buster = 'ts=' + Date.now();
-const base = 'https://wttr.in/'; // no location ⇒ wttr.in uses client IP
-const pngUrl = base + '?' + flags.join('&') + (flags.length ? '&' : '') + 'lang=en&' + buster + '.png';
-// For users who click the direct link, mirror the same flags (without the cache buster).
-openDirect.href = base + '?' + flags.join('&') + (flags.length ? '&' : '') + 'lang=en';
-return pngUrl;
-}
-
-
-function applyStateToUI(){
-btn3.setAttribute('aria-pressed', String(st.mode === '3day'));
-btnT.setAttribute('aria-pressed', String(st.mode === 'today'));
-bMet.setAttribute('aria-pressed', String(st.units === 'metric'));
-bImp.setAttribute('aria-pressed', String(st.units === 'imperial'));
-}
-
-
-function render(){
-applyStateToUI();
-img.src = buildUrl();
-}
-
-
-// Wire controls
-btn3.addEventListener('click', () => { st.mode = '3day'; localStorage.setItem('wttr.mode', st.mode); render(); });
-btnT.addEventListener('click', () => { st.mode = 'today'; localStorage.setItem('wttr.mode', st.mode); render(); });
-bMet.addEventListener('click', () => { st.units = 'metric'; localStorage.setItem('wttr.units', st.units); render(); });
-bImp.addEventListener('click', () => { st.units = 'imperial'; localStorage.setItem('wttr.units', st.units); render(); });
-refresh.addEventListener('click', render);
-
-
-// First paint
-render();
-})();
-</script>
-<noscript>
-<div style="max-width:980px;margin:0 auto;padding:0 16px;color:#9fb3c8">
-JavaScript is disabled. You can still view the forecast directly:
-<a href="https://wttr.in/" target="_blank" rel="noopener">wttr.in</a>
-</div>
-</noscript>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather</title>
+<!-- Redirect to GitHub after 10 seconds -->
+<meta http-equiv="refresh" content="10; url=https://github.com/vujcec">
+</head>
+<body>
+<!-- No images, no colors, no buttons, no options -->
+<iframe src="https://wttr.in/?format=%25l:+%25t+%25C" title="Weather" style="position:fixed;inset:0;border:0;width:100%;height:100%"></iframe>
 </body>
 </html>
