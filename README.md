@@ -13,7 +13,7 @@ A zero‑backend weather page that embeds **wttr.in**. No keys, no tracking. wtt
 - `.github/workflows/deploy.yml`
 3. Commit to `main` and push.
 4. In **Settings → Pages**, ensure *Source* is **GitHub Actions** (the default for this workflow). After the workflow finishes, your site will be live at:
-`https://<your-username>.github.io/<repo-name>/`, e.g.: https://vujcec.github.io
+`https://<your-username>.github.io/<repo-name>/`
 
 
 ## Custom domain (optional)
