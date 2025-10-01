@@ -1,4 +1,4 @@
-# wttr.in on GitHub Pages (IP‑based)
+# wttr.in on web site (IP‑based)
 
 
 A zero‑backend weather page that embeds **wttr.in**. No keys, no tracking. wttr.in auto‑detects the visitor's location by their IP address.
