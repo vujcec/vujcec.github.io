@@ -7,10 +7,13 @@ No keys, no tracking. **wttr.in** auto-detects the visitor's location by their I
 
 ## Examples
 
-| Dublin, IE (EU) |  | Chicago, IL (US) |
-|:--:|:--:|:--:|
-| ![Dublin, IE (EU) example](/screenshots/Dublin-IE-EU-example.png) | ✈︎ | ![Chicago, IL (US) example](/screenshots/Chicago-IL-US-example.png) |
+### Dublin, IE (EU)
+![Dublin](/screenshots/Dublin-IE-EU-example.png)
 
+# ✈︎
+
+### Chicago, IL (US)
+![Chicago](/screenshots/Chicago-IL-US-example.png)
 ---
 
 ## Quick start
@@ -21,7 +24,7 @@ No keys, no tracking. **wttr.in** auto-detects the visitor's location by their I
    - `index.html`
    - `.github/workflows/deploy.yml`
 3. Commit to `main` and push.
-4. Go to **Settings → Pages** and ensure **Source** is set to **GitHub Actions**.
+4. Go to **Settings > Pages** and ensure **Source** is set to **GitHub Actions**.
 
 After the workflow finishes, your site will be live at:
 
