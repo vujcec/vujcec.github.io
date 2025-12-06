@@ -3,6 +3,7 @@
 
 A zero‑backend weather page that embeds **wttr.in**. No keys, no tracking. wttr.in auto‑detects the visitor's location by their IP address.
 
+![Chicago, IL (US) example](/screenshots/Chicago-IL-US-example.png)
 
 ## Quick start
 
