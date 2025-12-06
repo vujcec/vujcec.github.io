@@ -5,8 +5,7 @@ No keys, no tracking. **wttr.in** auto-detects the visitor's location by their I
 
 ---
 
-|:--:|:--:|:--:|
-| ![Dublin, IE (EU) example](/screenshots/Dublin-IE-EU-example.png) | ✈︎ | ![Chicago, IL (US) example](/screenshots/Chicago-IL-US-example.png) |
+ ![Dublin, IE (EU) example](/screenshots/Dublin-IE-EU-example.png)  ✈︎  ![Chicago, IL (US) example](/screenshots/Chicago-IL-US-example.png) 
 
 ---
 
