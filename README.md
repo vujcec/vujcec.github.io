@@ -18,8 +18,3 @@ No keys, no tracking. **wttr.in** auto-detects the visitor's location by their I
    - `.github/workflows/deploy.yml`
 3. Commit to `main` and push.
 4. Go to **Settings > Pages** and ensure **Source** is set to **GitHub Actions**.
-
-After the workflow finishes, your site will be live at:
-
-```text
-https://vujcec.github.io/
