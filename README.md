@@ -1,4 +1,4 @@
-## Local weather conditions with GitHub pages https://vujcec.github.io 
+## Local weather conditions at https://vujcec.github.io GitHub pages
 
 A zero-backend weather page that embeds **wttr.in**.  
 No keys, no tracking. **wttr.in** auto-detects the visitor's location by their IP address.
