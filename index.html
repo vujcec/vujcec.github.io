@@ -60,12 +60,12 @@
       border-radius: 0.75rem;
       overflow: hidden;
       background: var(--bg);
-      min-height: 4.25rem;
+      min-height: 22rem;
     }
     iframe {
       display: block;
       width: 100%;
-      min-height: 4.25rem;
+      min-height: 22rem;
       border: 0;
       background: transparent;
     }
@@ -84,16 +84,16 @@
 <body>
   <main>
     <h1>Local weather</h1>
-    <p>Current local conditions are shown below using <a href="https://wttr.in/">wttr.in</a>.</p>
-    <p class="muted">This page redirects automatically to the GitHub profile after 2 seconds.</p>
+    <p>Current local conditions are shown below using <a href="https://wttr.in/">wttr.in</a> in browser mode.</p>
+    <p class="muted">This page redirects automatically to the GitHub profile after 2 seconds. The weather is embedded using the browser-oriented view to avoid separate text files opening.</p>
     <div class="weather">
       <iframe
-        src="https://wttr.in/?format=3"
-        title="Current local weather"
+        src="https://wttr.in/"
+        title="Current local weather report"
         referrerpolicy="no-referrer"
       ></iframe>
     </div>
-    <p class="muted">Weather is location-based by IP address, so the result can be approximate on VPNs, mobile networks, or some ISPs.</p>
+    <p class="muted">Weather is location-based by IP address, so the result can be approximate on VPNs, mobile networks, or some ISPs. If you still want the one-line text format specifically, it is better used in terminal bars or through a proxy/self-hosted bridge rather than directly in a browser page.</p>
     <nav aria-label="External links">
       <a href="https://github.com/vujcec/">GitHub profile</a>
       <a href="https://github.com/vujcec/vujcec.github.io">Source repository</a>
